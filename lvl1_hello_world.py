@@ -32,6 +32,10 @@ ini_tuple = (3, 4, 5, "iwan", "cindy", 7)
 # dictionary, seperti array, tapi tiap elemennya punya komponen key (yang bisa dipanggil) dan value. ditandai dengan { dan }
 ini_dict = {"joko":"ayah", "sandra":"ibu", "budi":"anak sulung", "santi":"anak bungsu"}
 
+# boolean, boolean hanya memiliki 2 alternatif value: True atau False
+manusia_butuh_air = True
+katak_hidup_di_angkasa_luar = False
+
 #cara mengambil value
 print(ini_string)
 print(ini_int)
