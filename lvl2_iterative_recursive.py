@@ -40,7 +40,7 @@ print(integerSeqRecursive([],25))
 
 
 """
-Segmen berikut ini akan mencari value pada posisi N di deret fibonacci
+Functions pada segmen berikut ini akan mencari value pada posisi N di deret fibonacci
 result: urutan ke n dari 0, 1, 1, 2, 3, 5, 8, 13, etc.
 *******************************************************
 N-TH NUMBER IN FIBONACCI ==============================
