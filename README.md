@@ -1,6 +1,6 @@
 # Pengenalan Programming Untuk Personil Non-teknis / Non-Produksi Plexus Studio
 ## Tentang Repo Ini
-Repo ini dibuat untuk memperkenalkan personil non-teknis / non-produksi (selanjutnya disebut PNP) di Plexus untuk memahami dasar-dasar programming sehingga mereka memiliki bayangan pekerjaan seperti apa yang dilakukan oleh tim teknis / produksi (selanjutnya disebut PP) di belakang layar. 
+Repo ini dibuat untuk memperkenalkan personil non-teknis / non-produksi (selanjutnya disebut PNP) di Plexus ( http://plexustechdev.com ) untuk memahami dasar-dasar programming sehingga mereka memiliki bayangan pekerjaan seperti apa yang dilakukan oleh tim teknis / produksi (selanjutnya disebut PP) dan dapat bekerjasama dengan lebih baik. 
 
 *Script-script* di repo ini dibuat dengan bayangan bahwa mereka dibuka dan diperkenalkan kepada PNP oleh salah satu PP dalam bentuk workshop hands-on di mana PNP dapat mencoba mengeksekusi dan memodifikasi script-script tersebut. Script-script ini akan ditulis dalam berbagai macam bahasa pemrograman agar PNP memiliki sense atas variasi bahasa-bahasa yang digunakan oleh PP.
 
