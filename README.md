@@ -65,14 +65,14 @@ pi = 3.14
 nomor_nomor_sila = [1,2,3,4,5]
 
 print(nomor_nomor_sila[0])
-//ini akan menghasilkan '1'
+# '1' akan tertampil sebagai hasil
 ```
 **6. Tuple.** Serupa dengan array, akan tetapi ia bersifat immutable, sekali dideklarasikan maka ia tidak akan dapat diubah seumur hidup program yang kita tulis. Dideklarasikan menggunakan simbol **(** dan **)**. Untuk memanggil satu value di dalam tuple, kita menggunakan sintaks **nama_tuple[nomor index]** , nomor index selalu dimulai dari 0 (nol), lihat contoh di bawah ini: 
 ```python
 nomor_nomor_sila = (1,2,3,4,5)
 
 print(nomor_nomor_sila[3])
-// '4' akan tertampil sebagai hasil
+# '4' akan tertampil sebagai hasil
 ```
 
 **6. Dictionary.** Serupa dengan array, akan tetapi ia berisi pasangan 'key' dan 'value'. Dideklarasikan menggunakan simbol **{** dan **}**. Untuk memanggil satu value di dalam dictionary, kita menggunakan sintaks **nama_dict[key]** . Berbeda dengan array dan tuple, elemen-elemen di dalam dictionary tidak memiliki index sehingga tidak dapat dipanggil menggunakan nomor index, lihat contoh di bawah ini: 
@@ -80,7 +80,7 @@ print(nomor_nomor_sila[3])
 pancasila = {'banyak_sila': 5, 'judul':'PANCASILA', 'sila_kesatu': 'Ketuhanan Yang Maha Esa'}
 
 print(pancasila['judul'])
-//'PANCASILA' akan tertampil sebagai hasil
+# 'PANCASILA' akan tertampil sebagai hasil
 ```
 
 
