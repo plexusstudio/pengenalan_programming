@@ -1,7 +1,7 @@
 # Pertemuan 1
 Untuk pendukung materi pada dokumen ini, silakan buka script [lvl1_hello_world.py](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl1_hello_world.py) : pengenalan, printing teks "hello world", konsep-konsep variable dan value, operasi-operasi dasar, pengenalan conditionals dan flow control.
 ## Apa Itu Programming? 
-Secara sederhana, programming adalah cara kita berkomunikasi dan memberikan instruksi kepada komputer. Banyak bahasa programming yang tersedia di dunia, bahasa-bahasa tersebut diciptakan agar instruksi-instruksi kepada komputer yang pada dasarnya adalah deret biner 1 dan 0 --on dan off-- menjadi lebih bisa terbaca oleh manusia.
+Secara sederhana, programming adalah cara kita berkomunikasi dan memberikan instruksi kepada komputer. Banyak bahasa programming yang tersedia di dunia, bahasa-bahasa tersebut diciptakan agar instruksi-instruksi kepada komputer yang pada dasarnya adalah deret biner 1 dan 0 *(on dan off)* menjadi lebih bisa terbaca oleh manusia.
 
 Tiap bahasa pemrograman memiliki sintaks yang berbeda-beda, dan memiliki kekuatan dan kelemahan yang berbeda-beda pula, sehingga kegunaan masing-masing pun berbeda. 
 
