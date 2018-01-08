@@ -180,6 +180,6 @@ def penjumlahan(a,b,c): #deklarasi function. a, b, c adalah argumen yang harus d
   c = a+b
   return c
 
-print(penjumlahan(10, 20, 3)) #memanggil function bernama 'penjumlahan' di atas, dengan argumen seperti di dalam tanda kurung.
+print(penjumlahan(10, 20, 3)) #memanggil function bernama 'penjumlahan' di atas, dengan argumen 10, 20, 30.
 # akan menampilkan hasil 30
 ```
