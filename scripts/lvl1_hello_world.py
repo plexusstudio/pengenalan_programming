@@ -36,7 +36,7 @@ ini_dict = {"joko":"ayah", "sandra":"ibu", "budi":"anak sulung", "santi":"anak b
 manusia_butuh_air = True
 katak_hidup_di_angkasa_luar = False
 
-#cara mengambil value
+# menampilkan value dengan memanggil variable
 print(ini_string)
 print(ini_int)
 print(ini_float)
