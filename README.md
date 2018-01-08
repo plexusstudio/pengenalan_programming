@@ -75,12 +75,117 @@ print(nomor_nomor_sila[3])
 # '4' akan tertampil sebagai hasil
 ```
 
-**6. Dictionary.** Serupa dengan array, akan tetapi ia berisi pasangan 'key' dan 'value'. Dideklarasikan menggunakan simbol **{** dan **}**. Untuk memanggil satu value di dalam dictionary, kita menggunakan sintaks **nama_dict[key]** . Berbeda dengan array dan tuple, elemen-elemen di dalam dictionary tidak memiliki index sehingga tidak dapat dipanggil menggunakan nomor index, lihat contoh di bawah ini: 
+**7. Dictionary.** Serupa dengan array, akan tetapi ia berisi pasangan 'key' dan 'value'. Dideklarasikan menggunakan simbol **{** dan **}**. Untuk memanggil satu value di dalam dictionary, kita menggunakan sintaks **nama_dict[key]** . Berbeda dengan array dan tuple, elemen-elemen di dalam dictionary tidak memiliki index sehingga tidak dapat dipanggil menggunakan nomor index, lihat contoh di bawah ini: 
 ```python
 pancasila = {'banyak_sila': 5, 'judul':'PANCASILA', 'sila_kesatu': 'Ketuhanan Yang Maha Esa'}
 
 print(pancasila['judul'])
 # 'PANCASILA' akan tertampil sebagai hasil
+```
+
+#### Operators
+Operation adalah manipulasi data dalam sebuah program. Operator adalah simbol yang dipakai dalam proses manipulasi data tersebut Beberapa operator yang sering digunakan adalah:
+**+ (tanda plus)**, untuk menjumlahkan satu data dengan data lainnya
+**- (tanda minus)**, untuk operasi pengurangan antar beberapa data
+__* (asterisk)__, untuk operasi perkalian
+**/ (slash)**, untuk operasi pembagian antara beberapa data
+**% (persen)**, untuk operasi modulo, mencari sisa dari sebuah pembagian. 
+
+Berikut beberapa sampel operasi:
+```python
+a = 5
+b = 10
+c = 12
+
+print(a+b)
+# akan menampilkan hasil 15 
+
+print(b-a)
+# akan menampilkan hasil 5 
+
+print(b*a)
+# akan menampilkan hasil 50
+
+print(b/a)
+# akan menampilkan hasil 2
+
+print(c%a)
+# akan menampilkan hasil 2
+```
+
+#### Flow , Loops dan Conditionals
+Secara umum sebuah program akan dijalankan dari baris paling atas menuju baris paling bawah. Akan tetapi untuk beberapa kasus tertentu, kita perlu mengubah flow / jalannya program tersebut. 
+
+**Conditional / if statement**
+Conditional membuat sebuah program bercabang, sehingga apabila beberapa keadaan terpenuhi, ia akan berjalan berbeda dengan apabila keadaan-keadaan tersebut tidak terpenuhi. Loop mengulang beberapa bagian dari kode sampai sebuah keadaan tertentu terpenuhi. 
+
+Contoh conditional:
+```python
+if 3 < 5:
+  print("ini benar!")
+else:
+  print("ini salah!")
+
+# akan menampilkan hasil "ini benar!"
+# di sini karena hasil evaluasi 3 < 5 adalah True, maka program akan melakukan print("ini benar!") 
+# sebagai operasi berikutnya.
+
+a = 2
+b = 5
+
+if b-a < 1:
+  print("reaksi 1")
+else:
+  print("reaksi 2")
+ 
+# akan menampilkan hasil "reaksi 2"
+# karena b-a = 5-2 = 3, dan eveluasi 3 < 1 adalah False, maka program akan melewatkan print("reaksi 1") 
+# dan menjalankan print("reaksi 2")
+```
+
+**For Loop**
+For loop adalah sebuah loop yang dijalankan untuk kali yang sudah ditentukan. Pada dasarya For loop adalah memerintahkan program untuk mengulangi sebuah blok kode untuk beberapa kali yang sudah ditentukan.
+
+Contoh For loop:
+```python
+for i in range(0,5):
+  print("hitung "+str(i))
+
+# akan menampilkan hasil: "hitung 0", "hitung 1", "hitung 2", "hitung 3", "hitung 4" 
+# masing-masing di baris yang berbeda
+```
+
+**While Loop**
+Dengan while loop, kita bisa mememerintahkan sebuah program untuk terus mengulangi blok tertentu, sampai kondisi yang diminta oleh loop tersebut tidak lagi terpenuhi. While loop dapat dibayangkan sebagai pernyataan if (conditional) yang dijalankan berulang-ulang sampai keadaan yang ditentukan tidak lagi terpenuhi.
+
+Contoh While loop:
+```python
+while True:
+  print ("saya senang!")
+
+# akan menampilkan "saya senang!" berulang-ulang sampai program dimatikan
+
+while buttonPressed == False:
+  print ("button is not pressed!")
+print("button is pressed!")
+
+# akan menampilkan "button is not pressed!" berulang-ulang sampai program dimatikan,
+# atau value buttonPressed berubah
+```
+
+
+#### Functions
+Function adalah cara mengelompokkan dan memberi nama beberapa operasi yang sering dipakai agar mudah untuk dipakai berulang-ulang. Setelah dideklarasikan, sebuah fungsi dapat dipanggil dan dijalankan tanpa perlu menuliskan ulang operasi-operasi yang terjadi didalamnya. Deklarasi sebuah function berbeda dari satu bahasa ke bahasa lainnya. Pada Python kita mendeklarasikan function dengan menggunakan keyword 'def' , diikuti nama function, lalu argumen-argumen yang diperlukan di dalam tanda **()**. Setelah operasi dilakukan, sebuah function bisa mengembalikan result dari operasi-operasi tersebut.
+
+Contoh function dan cara memanggilnya
+
+```python
+def penjumlahan(a,b,c): #deklarasi function. a, b, c adalah argumen yang harus ditulis ketika memanggil function
+  c = a+b
+  return c
+
+print(penjumlahan(10, 20, 3)) #memanggil function bernama 'penjumlahan' di atas, dengan argumen seperti di dalam tanda kurung.
+# akan menampilkan hasil 30
 ```
 
 
