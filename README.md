@@ -5,14 +5,17 @@ Repo ini dibuat untuk memperkenalkan personil non-teknis / non-produksi (selanju
 *Script-script* di repo ini dibuat dengan bayangan bahwa mereka dibuka dan diperkenalkan kepada PNP oleh salah satu PP dalam bentuk workshop hands-on di mana PNP dapat mencoba mengeksekusi dan memodifikasi script-script tersebut. Script-script ini akan ditulis dalam berbagai macam bahasa pemrograman agar PNP memiliki sense atas variasi bahasa-bahasa yang digunakan oleh PP.
 
 ## Daftar Pertemuan
-- **Pertemuan 1**
-Membahas konsep-konsep dasar dalam programming. Konsep yang dibahas: variable & value, operators, conditional & loops, functions.
+- **Pertemuan 1** Membahas konsep-konsep dasar dalam programming. Konsep yang dibahas: variable & value, operators, conditional & loops, functions.
   - Materi [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/materi/pertemuan_1.md)
   - Script [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl1_hello_world.py)
 
 - **Pertemuan 2** Membahas function lebih lanjut. Konsep yang dibahas: Iterasi (iteration) dan Rekursi (recursion)
   - Materi [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/materi/pertemuan_2.md)
   - Script [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl2_iterative_recursive.py)
+
+- **Pertemuan 3** Membahas Class, deklarasi, ciri-ciri, instansiasi.
+  - Materi _belum ada_
+  - Script _belum ada_
 
 
 
