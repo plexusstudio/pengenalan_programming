@@ -68,7 +68,7 @@ l = math.sqrt(16)
 
 print(l)
 
-# FLOW & CONDITIONALS ========================================================
+# FLOW, LOOPS & CONDITIONALS ========================================================
 
 # while loop
 count = 0
