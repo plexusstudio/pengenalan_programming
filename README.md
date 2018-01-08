@@ -11,7 +11,7 @@ Tiap bahasa pemrograman memiliki sintaks yang berbeda-beda, dan memiliki kekuata
 
 Untuk pengenalan konsep-konsep dasar programming kita akan menggunakan bahasa Python, untuk instalasi interpreter dan IDE, kita akan memakai distribusi Python populer yang bernama Anaconda. Silakan download di sini: https://www.anaconda.com/download/
 
-### Konsep-konsep Dalam Programming
+### Konsep Dan Istilah Dalam Programming
 #### *Variables* Dan *Values*
 *Variables* dan *values* adalah konsep paling kecil dan paling dasar dalam programming. Untuk mempermudah pemahaman, *variable* dapat dibayangkan sebagai nama sebuah *value*. *Variable* adalah cara supaya kita bisa memanggil sebuah *value* dan melakukan operasi terhadapnya. Deklarasi sebuah variable biasanya menggunakan simbol '=', di sebelah kiri simbol tersebut adalah *variable*, di sebelah kanan adalah *value*-nya
 
@@ -89,4 +89,4 @@ print(pancasila['judul'])
 2. [lvl2_iterative_recursive.py](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl2_iterative_recursive.py) : pengenalan konsep fungsi-fungsi iteratif dan rekursif.
 
 -- dokumen ini akan terus diupdate
--- terakhir diupdate tanggal 6 Jan 2018 --
+-- terakhir diupdate tanggal 8 Jan 2018 --
