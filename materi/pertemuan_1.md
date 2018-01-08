@@ -183,3 +183,6 @@ def penjumlahan(a,b,c): #deklarasi function. a, b, c adalah argumen yang harus d
 print(penjumlahan(10, 20, 3)) #memanggil function bernama 'penjumlahan' di atas, dengan argumen 10, 20, 3.
 # akan menampilkan hasil 30
 ```
+
+#### Latihan 
+Buatlah sebuah function yang menghasilkan hitungan dari 1 sampai 10
