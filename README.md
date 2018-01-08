@@ -10,8 +10,9 @@ Membahas konsep-konsep dasar dalam programming. Konsep yang dibahas: variable & 
   - Materi [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/materi/pertemuan_1.md)
   - Script [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl1_hello_world.py)
 
-- **Pertemuan 2**
-belum tersedia
+- **Pertemuan 2** Membahas function lebih lanjut. Konsep yang dibahas: Iterasi (iteration) dan Rekursi (recursion)
+  - Materi -- belum ada --
+  - Script [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl2_iterative_recursive.py)
 
 
 
