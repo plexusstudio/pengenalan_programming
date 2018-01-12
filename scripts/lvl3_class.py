@@ -59,8 +59,8 @@ class Bola():
         self.holder = holder
         
 # INSTANSIASI CLASS =========================
-andre = Human('andre', 168,89,0)
-susi = Human('susi', 155, 40, 1)
+andre = Human('Andre', 168,89,0)
+susi = Human('Susi', 155, 40, 1)
 bola_basket = Bola('bola basket', 10)
 
 # MEMANGGIL PROPERTY DALAM CLASS =========================
