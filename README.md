@@ -15,7 +15,7 @@ Repo ini dibuat untuk memperkenalkan personil non-teknis / non-produksi (selanju
 
 - **Pertemuan 3** Membahas Class, deklarasi, ciri-ciri, instansiasi.
   - Materi _belum ada_
-  - Script [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl3_class.py)
+  - Script [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl3_class.py) dan [simulasi pertandingan bola lempar dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl3_class_var2.py)
   
 ## Daftar Scripts 
 1. [lvl1_hello_world.py](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl1_hello_world.py) : pengenalan, printing teks "hello world", konsep-konsep variable dan value, operasi-operasi dasar, pengenalan conditionals dan flow control.
