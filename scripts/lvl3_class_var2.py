@@ -3,6 +3,13 @@
 Created on Fri Jan  5 10:46:38 2018
 
 @author: iqbal
+
+Ini adalah sebuah simulasi permainan bola lempar, di mana ada dua orang pemain yang saling melempar bola
+Reaksi pemain yang dilempar adalah salah satu di bawah ini:
+    a. Menangkap bola, dan melempar balik
+    b. Menghindar dari bola karena ia tahu bahwa bola akan out (dan bola pindah tangan)
+    c. Berusaha menangkap, namun gagal, maka skor lawan akan bertambah.
+Pertandingan akan berakhir pada saat skor salah satu pemain mencapai 22.
 """
 
 import random
@@ -26,18 +33,18 @@ class Human():
         else:
             self.gender = "lelaki"
             
-    def lempar(self, obyek): #obyek argtype: string
+    def lempar(self, obyek): #obyek argtype: Bola object
         sentence = self.name+" melempar "+obyek.name+"!"
         return sentence
     
-    def lempar_ke(self, lawan, obyek): #obyek argtype: string, #lawan argtype: Human object
+    def lempar_ke(self, lawan, obyek): #obyek argtype: Bola object, #lawan argtype: Human object
         obyek.updateHolder(lawan)
         sentence = self.name+" lempar "+obyek.name+" kepada "+lawan.name
         resp_sentence = lawan.response(self, obyek)
         whole_sentence = sentence+", "+resp_sentence       
         return whole_sentence
     
-    def response(self, lawan, obyek):        
+    def response(self, lawan, obyek): #obyek argtype: Bola object, #lawan argtype: Human object       
         response_type = random.randint(0,100)
         if response_type <= int(0.9 * self.skill):
             waktu.updateTime(5)
@@ -58,12 +65,12 @@ class Human():
         return response
                 
 class Bola():
-    def __init__(self, name, radius, holder):
+    def __init__(self, name, radius, holder): #name argtype: string, #radius argtype: integer, #holder argtype: Human object
         self.name = name
         self.radius = radius
         self.holder = holder
     
-    def updateHolder(self, holder):
+    def updateHolder(self, holder): #holder argtype: Human object
         self.holder = holder
         
 class PapanSkor():
