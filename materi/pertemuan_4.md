@@ -220,7 +220,7 @@ Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nan
      
    - ketikan kode berikut didalam "fungsi update (update: function())"
      ```javascript
-     if (this.bird.y < 0 || this.bird.y > 800) //check posisi y object burung
+     if (bird.y < 0 || bird.y > 800) //check posisi y object burung
      {
      	this.restartGame(); //memanggil fungsi restart jika posisi y burung kurang dari 0 dan lebih dari 800
      }     
@@ -251,7 +251,7 @@ Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nan
       game.physics.arcade.overlap(bird, pipes, this.nabrakPipa, null, this); //check jika burung dan pipa bertabrakan akan memanggil fungsi nabrakPipa
       ```
      
-    - ketikan kode berikut didalam "fungsi terbang (terbang: function())"
+    - ketikan kode berikut diawal "fungsi terbang (terbang: function())"
       ```javascript
       //logic terbang
       //check status burung
@@ -260,13 +260,13 @@ Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nan
       ```
       
 ##### 9. update tap/klik logic agar burung hanya terbang sekali jika di tap/klik
-   - ketikan kode berikut didalam "fungsi update (update: function())"
+   - modif dan ketikan kode berikut didalam "fungsi update (update: function())"
        ```javascript
         if (game.input.activePointer.isDown)
         {
             if(!Helper.MouseOnDown){
                 Helper.MouseOnDown = true;
-                this.jump();
+                this.terbang();
             }
         }
 
