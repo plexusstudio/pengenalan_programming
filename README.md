@@ -19,7 +19,7 @@ Repo ini dibuat untuk memperkenalkan personil non-teknis / non-produksi (selanju
   
 - **Pertemuan 4** Membahas Game Framework PHASER HTML5, JavaScript
   - Materi [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/materi/pertemuan_4.md)
-  - Script [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/BirdGame)
+  - Folder File Latihan [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/BirdGame)
   
 ## Daftar Scripts 
 1. [lvl1_hello_world.py](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl1_hello_world.py) : pengenalan, printing teks "hello world", konsep-konsep variable dan value, operasi-operasi dasar, pengenalan conditionals dan flow control.
@@ -27,4 +27,5 @@ Repo ini dibuat untuk memperkenalkan personil non-teknis / non-produksi (selanju
 3. [lvl3_class.py](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl3_class.py) : pengenalan konsep class, bagaimana mendeklarasikannya, menginstansiasi dan memanggil method.
 
 -- dokumen ini akan terus diupdate
+
 -- terakhir diupdate tanggal 30 Jan 2018 --
