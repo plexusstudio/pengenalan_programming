@@ -95,5 +95,61 @@ Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nan
      
    - ketikan kode berikut didalam "fungsi create (create: function())"
      ```javascript
+     game.physics.startSystem(Phaser.Physics.ARCADE); //mengaktifkan system physics pada game
+     
      bird = game.add.sprite(100, 0, 'bird'); //menambahkan object bird kedalam stage game dengan posisi x=100
+     game.physics.arcade.enable(bird); //mengaktifkan physics pada object bird
+     bird.body.gravity.y = 1000; //menambahkan body gravity pada bird agar bisa jatuh
      ```
+     
+   - buat fungsi baru dibawah/setelah fungsi update (terbang : function(){})"
+     ```javascript
+     ...
+     terbang: function(){
+    	//logic terbang
+        bird.body.velocity.y = -450; //burung akan terbang ke atas (sumbu y) sebesar 450, dan fungsi ini akan jalan jika fungsi terbang di panggil
+     }
+     ...
+     ```
+
+   - ketikan kode berikut didalam "fungsi update (update : function())"
+     ```javascript
+     if (game.input.activePointer.isDown) //jika mouse di teken (kiri/kanan)
+        {
+            this.terbang(); //menjalankan fungsi terbang
+        }
+     ```
+
+   - code pada var mainState akan menjadi seperti ini
+     ```javascript
+     var mainState = {
+	    preload: function() { 
+		// fungsi yang dijalanin pas pertama halaman muncul  
+		game.load.image('bird', 'assets/images/character/bird_0001.png'); //mengakses image bird_0001.png dan menamakannya dengan nama "bird"
+	    },
+
+	    create: function() { 
+		// fungsi ini dijalanin setelah preload beres
+		game.physics.startSystem(Phaser.Physics.ARCADE); //mengaktifkan system physics pada game
+
+		bird = game.add.sprite(100, 0, 'bird'); //menambahkan object bird kedalam stage game dengan posisi x=100
+		game.physics.arcade.enable(bird); //mengaktifkan physics pada object bird
+     		bird.body.gravity.y = 1000; //menambahkan body gravity pada bird agar bisa jatuh
+	    },
+
+	    update: function() {
+		//ini fungsi yang jalan terus2an kalo kata forum2 detailnya tuh dijalanin 60kali dalam satu detik
+		if (game.input.activePointer.isDown) //jika mouse di teken (kiri/kanan)
+		{
+		    this.terbang(); //menjalankan fungsi terbang
+		}
+	    },
+
+	    terbang: function(){
+		//logic terbang
+		bird.body.velocity.y = -450; //burung akan terbang ke atas (sumbu y) sebesar 450, dan fungsi ini akan jalan jika fungsi terbang di panggil
+	    }
+     };
+     ```
+     
+   - coba refresh/jalankan url http://localhost/phaser/BirdGame/, akan terlihat object burung terjatuh dan jika layar di tap/klik burung akan terbang terus ke atas
