@@ -1,3 +1,6 @@
+var bird; //object burung
+var pipes; //kumpulan object pipa
+
 // bikin phaser game di canvas, dengan resolusi 480 x 800
 var game = new Phaser.Game(480, 800, Phaser.AUTO, 'game-area');
 
@@ -25,3 +28,15 @@ game.state.add('main', mainState);
 
 // jalanin game phaser
 game.state.start('main');
+
+// fungsi Helper
+var Helper = new function(){
+
+    this.getRandomInt = function(min, max){
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+    }
+
+    this.MouseOnDown = false;
+}
