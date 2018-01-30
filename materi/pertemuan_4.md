@@ -3,7 +3,6 @@
 Pada pertemuan kali ini kita akan coba mempelajari Game Framework PHASER (https://phaser.io/).
 
 #### Persiapan Untuk Pertemuan 4
-- Download file phaser.js https://phaser.io/download
 - Download dan install web server https://www.apachefriends.org/index.html
 - Download dan Install salah satu text editor :
   - Sublime https://www.sublimetext.com/
@@ -64,4 +63,37 @@ desc: fungsi javascript akan dipanggil setelah semua kontenn pada file html sele
 ```
 
 ### PHASER
-...........
+Phaser adalah framework game HTML5 open source yang dibuat oleh Photon Storm (http://www.photonstorm.com). Phaser dirancang untuk membuat game yang akan berjalan di desktop dan mobile web browser. Perhatian lebih diberikan pada aspek performa game dalam mobile web browser.
+
+Langsung aja yah kita coba buat sebuah game dengan menggunakan PHASER, game yang akan kita buat yaitu game dengan gameplay seperti Flappy Bird.
+
+#### INFO GAME
+- user harus tap/klik layar agar burung bisa terus terbang, namun hati-hati karena burung juga harus bisa menghindari pipa pipa yang dilewatinya agar tidak menabrak pipa tersebut.
+
+Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nantinya akan mempermudah kita pada saat ngodingnya, kurang lebih kita bisa menjabarkannya menjadi seperti ini:
+1. Object Burung : 
+   - burung jatuh dari atas
+   - burung bisa terbang kalo layar di tap/klik
+2. Object Pipa :
+   - pipa akan terus muncul selama burung masih terbang
+   - ada 2 pipa, 1 pipa di atas, dan 1 lagi pipa di bawah, dimana di tengahnya akan ada ruang kosong untuk bisa di lalui oleh burung
+   - posisi ruang kosong pipa tersebut akan acak, bisa di atas, bawah atau tengah
+3. Status Permainan Berakhir :
+   - permainan berakhir apabila burung terbang terlalu atas, terbang terlalu bawah atau nabrak pipa.
+
+
+#### HAYU KITA NGODING
+1. Download satu folder file BirdGame [dapat didownload di sini] (https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/BirdGame)
+2. Simpan folder tersebut di folder "htdocs" web server yang sudah kita install (XAMPP), biasanya pathnya seperti ini (C:\xampp\htdocs)
+3. Jalankan module Apache dari XAMPP Control Panel, lalu buka browser anda (Chrome, Firefox, dll) dan ketikan url http://localhost/phaser/BirdGame/, jika muncul persegi panjang berwarna hitam di tengah browser anda bearti phaser sudah jalan dengan baik.
+4. buka file "main.js" (C:\xampp\htdocs\BirdGame\js\main.js).
+5. buat object burung :
+   - ketikan kode berikut didalam "fungsi preload (preload: function())"
+     ```javascript
+     game.load.image('bird', 'assets/images/character/bird_0001.png'); //mengakses image bird_0001.png dan menamakannya dengan nama "bird"
+     ```
+     
+   - ketikan kode berikut didalam "fungsi create (create: function())"
+     ```javascript
+     bird = game.add.sprite(100, 0, 'bird'); //menambahkan object bird kedalam stage game dengan posisi x=100
+     ```
