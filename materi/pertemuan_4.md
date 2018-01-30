@@ -277,3 +277,6 @@ Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nan
        ```
        
 ##### 10. coba refresh/jalankan url http://localhost/phaser/BirdGame/, maka kamu sudah bisa memainkan game Flappy Bird buatan kamu sendiri.
+
+##### 11. game yang sudah sedikit modif bisa kamu mainkan juga di http://plexustechdev.com/game/flappybird/, 
+
