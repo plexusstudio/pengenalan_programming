@@ -83,7 +83,7 @@ Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nan
 
 
 #### HAYU KITA BIKIN GAME
-##### 1. Download satu folder file BirdGame [dapat didownload di sini] (https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/BirdGame)
+##### 1. Download satu folder file (https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/BirdGame)
 ##### 2. Simpan folder tersebut di folder "htdocs" web server yang sudah kita install (XAMPP), biasanya pathnya seperti ini (C:\xampp\htdocs)
 ##### 3. Jalankan module Apache dari XAMPP Control Panel, lalu buka browser anda (Chrome, Firefox, dll) dan ketikan url http://localhost/phaser/BirdGame/, jika muncul persegi panjang berwarna hitam di tengah browser anda bearti phaser sudah jalan dengan baik.
 ##### 4. buka file "main.js" (C:\xampp\htdocs\BirdGame\js\main.js).
