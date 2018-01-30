@@ -75,19 +75,19 @@ Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nan
    - burung jatuh dari atas
    - burung bisa terbang kalo layar di tap/klik
 2. Object Pipa :
-   - pipa akan terus muncul selama burung masih terbang
    - ada 2 pipa, 1 pipa di atas, dan 1 lagi pipa di bawah, dimana di tengahnya akan ada ruang kosong untuk bisa di lalui oleh burung
    - posisi ruang kosong pipa tersebut akan acak, bisa di atas, bawah atau tengah
+   - pipa akan terus muncul selama burung masih terbang
 3. Status Permainan Berakhir :
    - permainan berakhir apabila burung terbang terlalu atas, terbang terlalu bawah atau nabrak pipa.
 
 
-#### HAYU KITA NGODING
-1. Download satu folder file BirdGame [dapat didownload di sini] (https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/BirdGame)
-2. Simpan folder tersebut di folder "htdocs" web server yang sudah kita install (XAMPP), biasanya pathnya seperti ini (C:\xampp\htdocs)
-3. Jalankan module Apache dari XAMPP Control Panel, lalu buka browser anda (Chrome, Firefox, dll) dan ketikan url http://localhost/phaser/BirdGame/, jika muncul persegi panjang berwarna hitam di tengah browser anda bearti phaser sudah jalan dengan baik.
-4. buka file "main.js" (C:\xampp\htdocs\BirdGame\js\main.js).
-5. buat object burung :
+#### HAYU KITA BIKIN GAME
+##### 1. Download satu folder file BirdGame [dapat didownload di sini] (https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/BirdGame)
+##### 2. Simpan folder tersebut di folder "htdocs" web server yang sudah kita install (XAMPP), biasanya pathnya seperti ini (C:\xampp\htdocs)
+##### 3. Jalankan module Apache dari XAMPP Control Panel, lalu buka browser anda (Chrome, Firefox, dll) dan ketikan url http://localhost/phaser/BirdGame/, jika muncul persegi panjang berwarna hitam di tengah browser anda bearti phaser sudah jalan dengan baik.
+##### 4. buka file "main.js" (C:\xampp\htdocs\BirdGame\js\main.js).
+##### 5. buat object burung :
    - ketikan kode berikut didalam "fungsi preload (preload: function())"
      ```javascript
      game.load.image('bird', 'assets/images/character/bird_0001.png'); //mengakses image bird_0001.png dan menamakannya dengan nama "bird"
@@ -102,7 +102,7 @@ Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nan
      bird.body.gravity.y = 1000; //menambahkan body gravity pada bird agar bisa jatuh
      ```
      
-   - buat fungsi baru dibawah/setelah fungsi update (terbang : function(){})"
+   - buat fungsi baru "(terbang : function(){})" dibawah/setelah "fungsi update"
      ```javascript
      ...
      terbang: function(){
@@ -153,3 +153,127 @@ Dari deskripsi tersebut kita harus bisa membagi menjadi beberapa fungsi yang nan
      ```
      
    - coba refresh/jalankan url http://localhost/phaser/BirdGame/, akan terlihat object burung terjatuh dan jika layar di tap/klik burung akan terbang terus ke atas
+   
+##### 6. buat object pipa :
+   - ketikan kode berikut didalam "fungsi preload (preload: function())"
+     ```javascript
+     game.load.image('pipe', 'assets/images/obstacle/pipe.png'); //mengakses image pipe.png dan menamakannya dengan nama "pipe"
+     ```
+     
+   - ketikan kode berikut didalam "fungsi create (create: function())"
+     ```javascript
+     pipes = game.add.group(); //variable pipes dijadikan varibale group
+     ```
+     
+   - buat fungsi baru "(addPipa : function(){})" dibawah/setelah "fungsi terbang"
+     ```javascript
+     ...
+     addPipa: function() {
+        var lobang = 100; //jarak ruang kosong antara pipa atas dan bawah
+        var x = 520; //posisi pipa pada saat muncul
+        var randJarakPipe = Helper.getRandomInt(0, 250); //variable bantuan untuk membuat posisi pipa atas dan bawah menjadi acak
+
+        //pipa atas
+        var pipaAtas = game.add.sprite(x, (randJarakPipe - 0) - lobang, 'pipe'); //menambahkan object pipa kedalam stage game
+        pipaAtas.anchor.setTo(.5,.5); //set pivot object pipa di tengah
+        pipaAtas.scale.y *= -1; //rotate vertical posisi pipa
+        game.physics.arcade.enable(pipaAtas); //mengaktifkan physics pada object pipa atas
+        pipaAtas.body.velocity.x = -100; //buat pipa atas bergerak ke arah kiri
+        pipes.add(pipaAtas); //menambahkan pipa atas ke dalam group pipes
+
+        // otomatis menghilangkan pipa atas jika sudah tidak terlihat di layar
+        pipaAtas.checkWorldBounds = true; 
+        pipaAtas.outOfBoundsKill = true; 
+
+
+        //pipa bawah
+        var pipaBawah = game.add.sprite(x, (randJarakPipe + 800) + lobang, 'pipe'); //menambahkan object pipa kedalam stage game
+        pipaBawah.anchor.setTo(.5,.5); //set pivot object pipa di tengah
+        game.physics.arcade.enable(pipaBawah); //mengaktifkan physics pada object pipa atas
+        pipaBawah.body.velocity.x = -100; //buat pipa atas bergerak ke arah kiri
+        pipes.add(pipaBawah); //menambahkan pipa atas ke dalam group pipes
+
+       
+        // otomatis menghilangkan pipa bawah jika sudah tidak terlihat di layar
+        pipaBawah.checkWorldBounds = true; 
+        pipaBawah.outOfBoundsKill = true; 
+     },
+     ...
+     ```
+     
+   - ketikan kode berikut didalam "fungsi create (create: function())"
+     ```javascript
+     this.timer = game.time.events.loop(3000, this.addPipa, this); //memanggil fungsi addPipa berulang-ulang dengan jarak selama 3 detik
+     ```
+     
+   - coba refresh/jalankan url http://localhost/phaser/BirdGame/, akan terlihat object burung terjatuh dan jika layar di tap/klik burung akan terbang terus ke atas, lalu akan muncul pipa-pipa yang bergerak ke arah kiri.
+
+##### 7. buat logic status permainan berakhir jika burung terbang terlalu atas terbang terlalu bawah:
+   - buat fungsi baru "(restartGame : function(){})" dibawah/setelah "fungsi addPipa"
+     ```javascript
+     ...
+     restartGame: function() {
+        game.state.start('main'); //menjalankan ulang game (restart game)
+     },
+     ...
+     ```
+     
+   - ketikan kode berikut didalam "fungsi update (update: function())"
+     ```javascript
+     if (this.bird.y < 0 || this.bird.y > 800) //check posisi y object burung
+     {
+     	this.restartGame(); //memanggil fungsi restart jika posisi y burung kurang dari 0 dan lebih dari 800
+     }     
+     ```
+ 
+##### 8. buat logic status permainan berakhir jika burung menabrak pipa:
+   - buat fungsi baru "(nabrakPipa : function(){})" dibawah/setelah "fungsi restartGame"
+      ```javascript
+      ...
+      nabrakPipa: function() {
+        //check status burung
+        if (bird.alive == false) 
+            return;
+
+        bird.alive = false; //set status bird menjadi false
+        game.time.events.remove(this.timer); //membuang fungsi looping timer
+
+        // akses semua pipa lalu menghentiakn gerakannya
+        pipes.forEach(function(p){
+            p.body.velocity.x = 0;
+        }, this);
+      },
+      ...
+      ```
+     
+   - ketikan kode berikut didalam "fungsi update (update: function())"
+      ```javascript
+      game.physics.arcade.overlap(bird, pipes, this.nabrakPipa, null, this); //check jika burung dan pipa bertabrakan akan memanggil fungsi nabrakPipa
+      ```
+     
+    - ketikan kode berikut didalam "fungsi terbang (terbang: function())"
+      ```javascript
+      //logic terbang
+      //check status burung
+      if (bird.alive == false)
+        return; 
+      ```
+      
+##### 9. update tap/klik logic agar burung hanya terbang sekali jika di tap/klik
+   - ketikan kode berikut didalam "fungsi update (update: function())"
+       ```javascript
+        if (game.input.activePointer.isDown)
+        {
+            if(!Helper.MouseOnDown){
+                Helper.MouseOnDown = true;
+                this.jump();
+            }
+        }
+
+        if (game.input.activePointer.isUp)
+        {
+             Helper.MouseOnDown = false;
+        }
+       ```
+       
+##### 10. coba refresh/jalankan url http://localhost/phaser/BirdGame/, maka kamu sudah bisa memainkan game Flappy Bird buatan kamu sendiri.
