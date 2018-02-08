@@ -21,6 +21,10 @@ Repo ini dibuat untuk memperkenalkan personil non-teknis / non-produksi (selanju
   - Materi [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/materi/pertemuan_4.md)
   - Folder File Latihan [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/BirdGame) atau [di sini](https://www.dropbox.com/s/z1ylzl7x197nd05/BirdGame.zip?dl=0)
   
+- **Pertemuan 5** Membahas integrasi GUI di game framework HTML5
+  - Materi [dapat didownload di sini](https://github.com/plexusstudio/pengenalan_programming/blob/master/materi/pertemuan_5.md)
+  - Folder File GUI [dapat didownload di sini](https://www.dropbox.com/s/le85seek0gkclcq/guiBirdGame.zip?dl=0)
+  
 ## Daftar Scripts 
 1. [lvl1_hello_world.py](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl1_hello_world.py) : pengenalan, printing teks "hello world", konsep-konsep variable dan value, operasi-operasi dasar, pengenalan conditionals dan flow control.
 2. [lvl2_iterative_recursive.py](https://github.com/plexusstudio/pengenalan_programming/blob/master/scripts/lvl2_iterative_recursive.py) : pengenalan konsep fungsi-fungsi iteratif dan rekursif.
@@ -28,4 +32,4 @@ Repo ini dibuat untuk memperkenalkan personil non-teknis / non-produksi (selanju
 
 -- dokumen ini akan terus diupdate
 
--- terakhir diupdate tanggal 30 Jan 2018 --
+-- terakhir diupdate tanggal 08 Feb 2018 --
