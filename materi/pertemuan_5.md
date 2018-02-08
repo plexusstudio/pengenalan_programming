@@ -6,3 +6,6 @@ dimana pertemuan ini akan khusus membahas penerapan GUI di phaser
 - COPY dan PASTE folder gui di folder images project sebelumnya (../assets/images)
   
 #### untuk penerapan GUI kita akan langsung live coding pada saat workshop.
+
+update :
+#### hasil perubahan coding pada workshop tadi bisa di download di sini https://www.dropbox.com/s/g8nvhvgd6mtp96n/main.js?dl=0
